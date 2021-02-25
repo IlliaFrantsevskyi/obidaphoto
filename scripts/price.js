@@ -40,9 +40,9 @@ function generateStudioComponent(studio) {
     const studioPrice2Hours = document.createElement("span");
     const studioPrice3Hours = document.createElement("span");
 
-    studioDiv.classList.add("studio"/*, "row"*/);
-    studioInfoDiv.classList.add("studio-info"/*, "col-4"*/);
-    carouselDiv.classList.add("carousel", "carousel" + "-" + id/*, "col-8"*/);
+    studioDiv.classList.add("studio");
+    studioInfoDiv.classList.add("studio-info");
+    carouselDiv.classList.add("carousel", "carousel" + "-" + id);
     studioNameHeading.classList.add("studio-name");
     studioAddressParagraph.classList.add("studio-location");
     studioInstaParagraph.classList.add("studio-insta");
@@ -56,8 +56,7 @@ function generateStudioComponent(studio) {
     studioPrice1Span.classList.add("price-number");
     studioPrice2Span.classList.add("price-number");
     studioPrice3Span.classList.add("price-number");
-
-    // carouselDiv.setAttribute("data-flickity", '{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true }');
+    
     studioInstaAnchor.setAttribute("href", studio.link);
 
     studioInstaAnchor.innerText = studio.link;
@@ -70,7 +69,7 @@ function generateStudioComponent(studio) {
     studioPrice2Span.innerText = studio.price_2;
     studioPrice3Span.innerText = studio.price_3;
     studioPriceHryvnia.innerText = " грн";
-    studioPricesHeadingSpan.innerText = "Цены за фотосессию"
+    studioPricesHeadingSpan.innerText = "Цены за фотосессию";
 
     studioDiv.appendChild(studioInfoDiv);
     studioDiv.appendChild(carouselDiv);
@@ -102,6 +101,8 @@ function generateStudioComponent(studio) {
 
     for (const photoUrl of studio.photo_urls) {
         const img = document.createElement("img");
+        
+        img.classList.add("carousel-image");
         img.setAttribute("src", photoUrl);
 
         carouselDiv.appendChild(img);
@@ -109,5 +110,5 @@ function generateStudioComponent(studio) {
 
     document.getElementsByClassName("main-content")[0].appendChild(studioDiv);
 
-    $(".carousel" + "-" + id).flickity({ "imagesLoaded": true, "wrapAround": true });
+    $(document.getElementsByClassName("carousel" + "-" + id)).flickity({ "imagesLoaded": true, "wrapAround": true });
 }

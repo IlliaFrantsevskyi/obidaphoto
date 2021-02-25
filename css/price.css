@@ -3,6 +3,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-size: 16px !important;
 }
 
 p, ul, h1, h2, h3 {
@@ -78,20 +79,21 @@ footer p {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 50px 0;
 }
 
 .main-content .studio {
     margin-bottom: 100px;
     display: flex;
+    justify-content: space-between;
 }
 
 .main-content .studio:last-child {
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
 
 .main-content .studio .studio-name span {
-    font-size: 32px;
+    font-size: 28px;
     border-bottom: 2px solid salmon;
 }
 
@@ -100,7 +102,9 @@ footer p {
 }
 
 .main-content .studio .studio-info {
-    flex: 33.3%;
+    /* flex: 33.3%;
+    margin-right: 50px; */
+    flex-basis: 35%;
 }
 
 .main-content .studio .studio-icon {
@@ -113,7 +117,7 @@ footer p {
 
 .main-content .studio .prices-heading {
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .main-content .studio .prices-heading span {
@@ -131,12 +135,31 @@ footer p {
 
 .carousel {
     background: #EEE;
-    flex: 66.6%;
+    /* flex: 66.6%; */
+    flex-basis: 60%;
 }
 
 .carousel img {
     display: block;
     height: 400px;
+}
+
+.carousel-image {
+    display: block;
+    height: 400px;
+    /* set min-width,
+        allow images to determine cell width */
+    min-width: 150px;
+    max-width: 100%;
+    margin-right: 10px;
+    /* vertically center */
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.carousel.is-fullscreen .carousel-image {
+    height: auto;
+    max-height: 100%;
 }
 
 @media (max-width: 1200px) {
