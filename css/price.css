@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+p, ul, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.root {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title-block {
+    background-image: url("../images/faq-bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.title-opacity-block {
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.30), rgba(0,0,0,0.30));
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.title-text-block {
+    height: 100vh;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    display: table;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.title-text-block p {
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 100;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 38px;
+}
+
+footer {
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #171717;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.main-content .studio {
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.main-content .studio:last-child {
+    margin-bottom: 0;
+}
+
+.main-content .studio .studio-name span {
+    font-size: 32px;
+    border-bottom: 2px solid salmon;
+}
+
+.main-content .studio .studio-name {
+    margin-bottom: 50px;
+}
+
+.main-content .studio .studio-info {
+    flex: 33.3%;
+}
+
+.main-content .studio .studio-icon {
+    margin-right: 10px;
+}
+
+.main-content .studio .studio-prices {
+    margin-top: 50px;
+}
+
+.main-content .studio .prices-heading {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.main-content .studio .prices-heading span {
+    border-bottom: 2px solid lightskyblue;
+}
+
+.main-content .studio .studio-price {
+    font-size: 18px;
+}
+
+.main-content .studio .studio-price .price-number {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.carousel {
+    background: #EEE;
+    flex: 66.6%;
+}
+
+.carousel img {
+    display: block;
+    height: 400px;
+}
+
+@media (max-width: 1200px) {
+    .main-content .studio {
+        display: block;
+    }
+
+    .main-content .studio .studio-name {
+        margin-bottom: 30px;
+    }
+
+    .main-content .studio .studio-prices {
+        margin-top: 20px;
+    }
+
+    .main-content .studio .studio-price {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .main-content .studio .studio-price:last-child {
+        margin-right: 0;
+    }
+
+    .main-content .studio .studio-info {
+        margin-bottom: 20px;
+    }
+
+    .carousel img {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-text-block p {        
+        font-size: 30px;
+    }
+
+    .carousel img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content .studio .studio-price {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel img {
+        height: 200px;
+    }
+
+    .main-content .studio .studio-price {
+        font-size: 16px;
+    }
+    
+    .main-content .studio .studio-price .price-number {
+        font-size: 18px;
+    }
+
+    .main-content .studio .studio-location, .main-content .studio .studio-insta {
+        font-size: 14px;
+    }
+
+    .main-content .studio .studio-name span {
+        font-size: 26px;
+    }
+
+    .main-content {
+        padding-top: 30px;
+    }
+
+    .main-content .studio .prices-heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+}
