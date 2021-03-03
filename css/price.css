@@ -4,6 +4,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-size: 16px !important;
+    height: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 p, ul, h1, h2, h3 {
@@ -16,11 +18,15 @@ a {
 }
 
 .root {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     overflow: auto;
     box-sizing: border-box;
-    font-family: 'Montserrat Alternates', sans-serif;
+    padding-bottom: 70px;
+}
+
+.title-block, .title-opacity-block, .title-text-block {
+    height: 40vh;
 }
 
 .title-block {
@@ -28,12 +34,10 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 
 .title-opacity-block {
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.30), rgba(0,0,0,0.30));
-    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -41,14 +45,13 @@ a {
 }
 
 .title-text-block {
-    height: 100vh;
     position: absolute;
     text-align: center;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
     display: table;
     width: 100%;
@@ -65,18 +68,22 @@ a {
 }
 
 footer {
+    height: 70px;
     width: 100%;
-    padding: 30px 40px;
+    padding: 0 40px;
     background-color: #171717;
     box-sizing: border-box;
+    display: table;
+    margin-top: -70px;
 }
 
 footer p {
+    display: table-cell;
+    vertical-align: middle;
     color: #ffffff;
 }
 
 .main-content {
-    width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 50px 0;
@@ -162,6 +169,16 @@ footer p {
     max-height: 100%;
 }
 
+@media (max-width: 1250px) {
+    .main-content {
+        padding: 50px 20px;
+    }
+
+    footer {
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 1200px) {
     .main-content .studio {
         display: block;
@@ -211,6 +228,10 @@ footer p {
 }
 
 @media (max-width: 500px) {
+    .title-block, .title-opacity-block, .title-text-block {
+        height: 60vh;
+    }
+
     .carousel img {
         height: 200px;
     }

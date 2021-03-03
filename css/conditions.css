@@ -68,7 +68,7 @@ a {
 }
 
 .main-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     padding: 50px 0;
 }
@@ -89,63 +89,20 @@ footer p {
     color: #ffffff;
 }
 
-/* Accordion */
-
-.accordion {
-	margin: 1rem 0;
-	padding: 0;
-	list-style: none;
-	border-top: 1px solid #e5e5e5;
+.conditions-list {
+    list-style: none;
 }
 
-.accordion-item {
-	border-bottom: 1px solid #e5e5e5;
+.conditions-list li {
+    background: url('../images/conditions-tick.png') left center no-repeat; 
+    margin-bottom: 15px;
+    line-height: 1.4em;
+    padding: 10px 0 10px 40px;
 }
 
-/* Thumb */
-.accordion-thumb {
-	margin: 0;
-	padding: 2rem 0;
-	cursor: pointer;
-    font-weight: bold;	
-    position: relative;
-}
-
-.accordion-thumb::after {
-    content: '';
-    height: 15px;
-    width: 15px;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
-    transform: rotate(45deg);
-    transition: transform .2s ease-out;
-    
-    position: absolute;
-    right: 0;
-    top: 50%;
-}
-
-/* Panel */
-.accordion-panel {
-	margin: 0;
-	padding-bottom: 2rem;
-	display: none;
-}
-
-/* Active */
-.accordion-item.is-active .accordion-thumb::after {
-	transform: rotate(225deg);
-}
-
-@media (max-width: 850px) {
-    .accordion {
-        margin: 0 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .title-text-block p {        
-        font-size: 30px;
+@media (max-width: 1250px) {
+    .main-content {
+        padding: 50px 20px;
     }
 
     footer {
@@ -153,8 +110,14 @@ footer p {
     }
 }
 
-@media (max-width: 500px) {
-    .title-block, .title-opacity-block, .title-text-block {
-        height: 60vh;
+@media (max-width: 600px) {
+    .conditions-list li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title-text-block p {        
+        font-size: 30px;
     }
 }
