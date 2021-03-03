@@ -104,7 +104,7 @@ footer p {
     color: #000000;
 }
 
-.main-info a:hover, .main-info a:focus, .main-info a:hover i, .main-info a:focus, .social-media-list li a:hover i, .social-media-list li a:focus i {
+.main-info a:hover, .main-info a:hover i, .social-media-list li a:hover i {
     color: orange;
     transition: color 0.3s ease-in-out;
 }
