@@ -164,7 +164,7 @@
     .header .navigation .menu li {
         display: block;
         text-align: center;
-        padding: 20px;
+        /*padding: 20px;*/
     }
 
     .header .navigation .menu li:hover {
@@ -173,6 +173,11 @@
 
     .header .navigation .menu li:hover a {
         color: #000000;
+    }
+
+    .header .navigation .menu li a {
+        display: block;
+        padding: 20px;
     }
     
     .header .navigation .social-media-block {
